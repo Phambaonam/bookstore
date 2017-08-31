@@ -1,0 +1,40 @@
+<head>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<div id="content">
+    <div id="side-content">
+        <h1>Category</h1>
+    </div>
+
+    <div id="main-content">
+        {% for book in data %}
+        <article id="post-28041" class="post-list clearfix">
+            <div class="entry-thumbnail hover-thumb">
+                <a href="/{{ book.name_book }}" rel="bookmark">
+                    <img width="398" height="499" src="{{ book.image }}" alt="{{ book.name_book }}">		
+                </a>
+            </div>
+            <!-- END .entry-thumbnail -->
+            <div class="entry-body">
+                <header class="entry-header">
+                    <h2 class="entry-title"><a href="/{{ book.name_book }}" rel="bookmark">{{ book.name_book }}</a></h2>
+                    <!-- END .entry-title -->
+                    <div class="entry-meta">
+                        <span class="author vcard">
+                            <h5 class="entry-author">By: <a href="#" rel="tag">{{ book.author }}</a></h5>
+                        </span>
+                    </div>
+                    <!-- END .entry-meta -->
+                </header>
+                <!-- END .entry-header -->
+                <div class="entry-summary">
+                    <p>{{ book.content }} …</p>
+                </div>
+                <!-- END .entry-summary -->
+            </div>
+            <!-- END .entry-body -->
+        </article>
+        {% endfor %}
+    </div>
+</div>

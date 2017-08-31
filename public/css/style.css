@@ -1,0 +1,151 @@
+* {
+  margin: 0 auto;
+  box-sizing: border-box
+}
+body {
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #4e5860;
+  background-color: #f2f2f2;
+}
+
+a {
+  color: #00B7FF;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+
+#content {
+  padding: 25px;
+  max-width: 1000px;
+  width: 100%;
+  background: #fff;
+  min-height: 90%;
+  display: block;
+  margin: 25px auto;
+}
+#side-content {
+  width: 220px;
+  height: 90%;
+  float: left;
+  border: 1px solid green;
+}
+#main-content {
+  padding: 0;
+  width: 730px;
+  height: 100%;
+  float: left;
+  /* border: 1px  solid blue; */
+  overflow: hidden;
+}
+#main-content img {
+  max-width: 100%;
+  height: auto;
+}
+.post-list {
+  position: relative;
+  height: 230px;
+  padding: 0 0 25px 0;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.post-list .entry-thumbnail {
+  margin: 0;
+  background-color: #e4e4e4;
+  width: 17.80%;
+  float: left;
+  overflow: hidden;
+}
+.post-list .entry-body {
+  width: 79%;
+  max-width: 745px;
+  float: right;
+}
+
+.post-list .entry-title {
+  font-weight: 400;
+  margin: 0 0 10px 0;
+}
+.post-list .entry-title a {
+  color: #555;
+}
+.entry-meta {
+  font-size: 12px;
+  color: #999999;
+  margin-bottom: 5px;
+}
+.entry-author {
+  color: #999999;
+}
+.entry-author a {
+  color: #999999;
+}
+/* detail book */
+.single-title {
+  margin: 0 0 15px 0;
+}
+.single-post .entry-meta {
+  color: #999999;
+  font-size: 14px;
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: #e5e5e5;
+  padding: 10px 0;
+  line-height: 30px;
+  margin: 0 0 15px 0;
+}
+.entry-body-thumbnail {
+  margin: 0;
+  background-color: #ffffff;
+  width: 37%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  margin-top: 4px;
+}
+
+.book-detail {
+  margin-left: 42%;
+  color: #2a3744;
+  max-width: 745px;
+  height: 345px;
+}
+
+.book-detail dl {
+  font-size: 14px;
+}
+dl {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.book-detail dl dt {
+  float: left;
+  padding: 10px 0px 13px 0px;
+  width: 100px;
+}
+dt {
+  font-weight: bold;
+}
+.book-detail dl dd {
+  margin-left: 30px;
+  padding: 10px 0px 13px 0px;
+  min-height: 33;
+  height: auto !important;
+  height: 33;
+}
+
+.entry-content {
+  color: #2a3744;
+  font-size: 14px;
+}
+
+h3 {
+  font-size: 16px;
+  margin: 15px 0 15px 0;
+  font-weight: bold;
+  color: #2a3744;
+}
+

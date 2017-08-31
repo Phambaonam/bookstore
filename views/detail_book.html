@@ -1,0 +1,57 @@
+<head>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<div id="content">
+    <div id="side-content">
+        <h1>Category</h1>
+    </div>
+
+    <div id="main-content">
+        {% for book in data %}
+        <article id="post-28041" class="post-list clearfix">
+            <header class="entry-header">
+                <h1 class="single-title">{{ book.name_book }}</h1>
+                <!-- END .entry-title -->
+                <div class="entry-meta clearfix">
+                    <div class="entry-body-thumbnail hover-thumb">
+                        <a href="/{{ book.name_book }}">
+                            <img src="{{ book.image }}" alt="{{ book.name_book }}">		                        
+                        </a>
+                    </div>
+                    <!-- END .entry-thumbnail -->
+                    <div class="book-detail">
+                        <dl>
+                            <dt>Author:</dt>
+                            <dd>
+                                <a href="#">{{book.author}}</a>
+                            </dd>
+                            <dt>ISBN-10:</dt>
+                            <dd> {{ book.isbn }}</dd>
+                            <dt>Year:</dt>
+                            <dd> {{ book.publish }}</dd>
+                            <dt>Pages:</dt>
+                            <dd> {{ book.pages }}</dd>
+                            <dt>Language:</dt>
+                            <dd> {{ book.language }}</dd>
+                            <dt>File size:</dt>
+                            <dd> {{ book.file_size }} MB</dd>
+                            <dt>File format:</dt>
+                            <dd> {{ book.file_format }}</dd>
+                            <dt>Category:</dt>
+                            <dd>
+                                <a href="#">{{ book.category_book }}</a>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <!-- END .entry-meta -->
+            </header>
+            <div class="entry-content">
+                <h3>Book Description:</h3>
+                <p> {{ book.content }}</p>
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+</div>
