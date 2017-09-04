@@ -1,22 +1,18 @@
-<head>
-    <link rel="stylesheet" href="/css/style.css">
-</head>
+{% include './layout/header.html' %}
 
 <div id="content">
-    <div id="side-content">
-        <h1>Category</h1>
-    </div>
+{% include './layout/side-content.html' %}
 
     <div id="main-content">
         {% for book in data %}
         <article id="post-28041" class="post-list clearfix">
             <header class="entry-header">
-                <h1 class="single-title">{{ book.name_book }}</h1>
+                <h1 class="single-title">{{ book.name }}</h1>
                 <!-- END .entry-title -->
                 <div class="entry-meta clearfix">
                     <div class="entry-body-thumbnail hover-thumb">
-                        <a href="/{{ book.name_book }}">
-                            <img src="{{ book.image }}" alt="{{ book.name_book }}">		                        
+                        <a href="/book/{{ book.name | lower |replace(" ", "-") |  replace(",", "") | replace("#", "-sharp") }}">
+                            <img src="{{ book.images }}" alt="{{ book.name_book }}">		                        
                         </a>
                     </div>
                     <!-- END .entry-thumbnail -->
@@ -24,12 +20,12 @@
                         <dl>
                             <dt>Author:</dt>
                             <dd>
-                                <a href="#">{{book.author}}</a>
+                                <a href="/author/{{ book.author | lower | replace(" ", "-") }}">{{book.author}}</a>
                             </dd>
                             <dt>ISBN-10:</dt>
-                            <dd> {{ book.isbn }}</dd>
+                            <dd> {{ book.isnb }}</dd>
                             <dt>Year:</dt>
-                            <dd> {{ book.publish }}</dd>
+                            <dd> {{ book.year }}</dd>
                             <dt>Pages:</dt>
                             <dd> {{ book.pages }}</dd>
                             <dt>Language:</dt>
@@ -40,7 +36,7 @@
                             <dd> {{ book.file_format }}</dd>
                             <dt>Category:</dt>
                             <dd>
-                                <a href="#">{{ book.category_book }}</a>
+                                <a href="/category/{{ book.name_category | lower | replace(" ", "-") }}">{{ book.name_category }}</a>
                             </dd>
                         </dl>
                     </div>
@@ -49,7 +45,7 @@
             </header>
             <div class="entry-content">
                 <h3>Book Description:</h3>
-                <p> {{ book.content }}</p>
+                <p> {{ book.description | safe }}</p>
             </div>
         </article>
         {% endfor %}

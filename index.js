@@ -15,6 +15,7 @@ nunjucks.configure('views', {
     express: app,
     watch: true 
 })
+
 app.engine('html', nunjucks.render)
 app.set('view engine', 'html')
 

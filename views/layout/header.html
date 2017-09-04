@@ -1,0 +1,45 @@
+{% block header %}
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<header id="masthead" class="site-header" role="banner">
+    <div class="nav-inner">
+        <nav id="site-navigation" class="main-navigation clearfix" role="navigation">
+            <ul id="menu-allitebooks-com" class="site-nav">
+                <li><a title="All IT eBooks" href="#">All IT eBooks</a></li>
+                <li class=" dropbtn"><a title="All Categories" class="sf-with-ul">Categories</a>
+                    <ul class="dropdown-content sub-menu">
+                        <li class="dropbtn-1 "><a href="http://www.allitebooks.com/web-development/" class="sf-with-ul">Web Development</a>
+                            <ul class=" sub-menu-1">
+                                <li class="menu-item "><a href="http://www.allitebooks.com/web-development/asp-net/">ASP.NET</a></li>
+                                <li class="menu-item "><a href="http://www.allitebooks.com/web-development/cms/">CMS</a></li>
+                                <li class="menu-item "><a href="http://www.allitebooks.com/web-development/html-html5-css/">HTML, HTML5 &amp; CSS</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropbtn-1"><a href="http://www.allitebooks.com/programming/" class="sf-with-ul">Programming</a>
+                            <ul class="sub-menu-1">
+                                <li class="menu-item"><a href="http://www.allitebooks.com/programming/c/">C &amp; C++</a></li>
+                                <li class="menu-item"><a href="http://www.allitebooks.com/programming/c-programming/">C#</a></li>
+                                <li class="menu-item"><a href="http://www.allitebooks.com/programming/delphi/">Delphi</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                </li>
+            </ul>
+        </nav>
+        <!-- END #site-navigation -->
+        <div class="site-search">
+            <form role="search" method="get" id="searchform" class="searchform" action="/">
+                <input type="text" value="" name="search" id="s">
+                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                <input type="submit" id="searchsubmit" value="">
+            </form>
+        </div>
+        <!-- END .search-form -->
+    </div>
+    <!-- END .nav-inner -->
+</header>
+{% endblock %}
