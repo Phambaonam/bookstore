@@ -1,9 +1,9 @@
 {% block side_content %}
 <div id="side-content">
     <ul id="menu-categories" class="list-categories clearfix">
-        <li><a href="http://www.allitebooks.com/web-development/">Web Development</a></li>
-        <li><a href="http://www.allitebooks.com/programming/">Programming</a></li>
-        <li><a href="http://www.allitebooks.com/datebases/">Datebases</a></li>
+        {% for item in data.category_book %}
+            <li><a href="/category/{{  item.name | lower | replace(" ", "-") }}">{{ item.name }}</a></li>
+        {% endfor %}    
     </ul>
 </div>
 {% endblock %}

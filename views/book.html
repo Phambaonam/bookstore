@@ -5,7 +5,7 @@
 {% include './layout/side-content.html' %}
 
     <div id="main-content">
-        {% for book in data.home %}
+        {% for book in detail %}
             <article id="post-28041" class="post-list clearfix">
                 <div class="entry-thumbnail hover-thumb">
                     <a href="/book/{{ book.name | lower |replace(" ", "-") |  replace(",", "") | replace("#", "-sharp") }}" rel="bookmark">

@@ -4,7 +4,7 @@
 {% include './layout/side-content.html' %}
 
     <div id="main-content">
-        {% for book in data %}
+        {% for book in detail %}
         <article id="post-28041" class="post-list clearfix">
             <header class="entry-header">
                 <h1 class="single-title">{{ book.name }}</h1>
@@ -44,7 +44,7 @@
                 <!-- END .entry-meta -->
             </header>
             <div class="entry-content">
-                <h3>Book Description:</h3>
+                <!-- <h3>Book Description:</h3> -->
                 <p> {{ book.description | safe }}</p>
             </div>
         </article>
